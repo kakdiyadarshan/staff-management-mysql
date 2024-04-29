@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcceptView</title>
+</head>
+
+<body>
+    <h2>Decline View</h2>
+    <form method="post">
+        <table border="">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Starting Date</th>
+                <th>Ending Date</th>
+                <th>Total Day</th>
+            </tr>
+            <% result.forEach(function(data){ %>
+                <tr>
+                    <td>
+                        <%= data.id%>
+                    </td>
+                    <td>
+                        <%= data.taskname%>
+                    </td>
+                    <td>
+                        <%= data.startdate%>
+                    </td>
+                    <td>
+                        <%= data.enddate%>
+                    </td>
+                    <td>
+                        <%= data.totalday %>
+                    </td>
+                </tr>
+                <% }); %>
+                    </tr>
+        </table>
+    </form>
+</body>
+
+</html>

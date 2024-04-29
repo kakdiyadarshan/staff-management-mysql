@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Task</title>
+  </head>
+  <body>
+    <form method="post">
+      <table>
+        <tr>
+          <td>Task Name :</td>
+          <td><input type="text" name="taskname" /></td>
+          <br />
+        </tr>
+        <tr>
+          <td>Ending Date :</td>
+          <td><input type="date" name="enddate" /></td>
+          <br />
+        </tr>
+        <tr>
+          <td>Staff Name :</td>
+          <td>
+            <select name="name" id="">
+              <% result.forEach(function(data){%>
+              <option value="<%= data.name%>"><%= data.name%></option>
+              <%});%>
+            </select>
+          </td>
+          <br />
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" name="addtask" value="Add Task" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

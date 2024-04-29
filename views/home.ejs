@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <ul style="display: flex;justify-content: space-between;">
+        <li><a href="/assigntask">Assign Task</a></li>
+        <li><a href="/acceptview">View Accept</a></li>
+        <li><a href="/declineview">View Decline</a></li>
+        <li><a href="/complete">View Completed</a></li>
+        <li><a href="/running">View Running</a></li>
+        <li><a href="/padding">View Padding</a></li>
+    </ul>
+
+    <table border="">
+        <tr>
+            <th>ID</th>
+            <th>Task Name</th>
+            <th>Ending Date</th>
+            <th>Total Days</th>
+        </tr>
+
+        <% result.forEach(function(data) {  %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.taskname %></td>
+                <td><%= data.enddate %></td>
+                <td><%= data.totalday %></td>
+            </tr>
+        <% }); %>
+
+    </table>
+
+</body>
+
+</html>

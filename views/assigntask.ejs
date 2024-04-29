@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Task</title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff</title>
+</head>
+
+<body>
+
+    <!-- <ul style="display: flex;justify-content: space-between;">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/acceptview">View Accept</a></li>
+        <li><a href="/declineview">View Decline</a></li>
+        <li><a href="/complete">View Completed</a></li>
+        <li><a href="/running">View Running</a></li>
+        <li><a href="/padding">View Padding</a></li>
+
+    </ul> -->
+    <li><a href="/home">Home</a></li>
+
+
+    <h2>Assign Task</h2>
+
+    <table border="">
+        <tr>
+            <th>Id</th>
+            <th>Staff Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Total Days</th>
+            <th>Staff Name</th>
+            <th>Accept</th>
+            <th>Decline</th>
+        </tr>
+
+
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.taskname %></td>
+                <td><%= data.startdate %></td>
+                <td><%= data.enddate %></td>
+                <td><%= data.totalday %></td>
+                <td><%= data.staffname %></td>
+                <td><a href="/accepttask/<%= data.id%>" name="accept">Accept</a></td>
+                <td><a href="/declinetask/<%= data.id %>" name="decline">Decline</a></td>
+            </tr>
+            <% }); %>
+
+
+    </table>
+
+</body>
+
+</html>
+    
+</body>
+</html>

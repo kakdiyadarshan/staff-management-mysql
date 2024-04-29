@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff</title>
+</head>
+
+<body>
+
+    <table border="">
+        <tr>
+            <th>Id</th>
+            <th>Staff Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.name %></td>
+                <td><%= data.email %></td>
+                <td><%= data.password %></td>
+                <td><a href="/update/<%= data.id %> ">Update</td>
+                <td><a href="/delete/<%= data.id %> ">Delete</a></td>
+            </tr>
+        <% }); %>
+
+    </table>
+
+</body>
+
+</html>

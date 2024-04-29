@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Task</title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff</title>
+</head>
+
+<body>
+
+    <table border="">
+        <tr>
+            <th>Id</th>
+            <th>Staff Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Total Days</th>
+            <th>Staff Name</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.taskname %></td>
+                <td><%= data.startdate %></td>
+                <td><%= data.enddate %></td>
+                <td><%= data.totalday %></td>
+                <td><%= data.staffname %></td>
+                <td><a href="/updatetask/<%= data.id %> ">Update</td>
+                <td><a href="/deletetask/<%= data.id %> ">Delete</a></td>
+            </tr>
+            <% }); %>
+
+    </table>
+
+</body>
+
+</html>
+    
+</body>
+</html>

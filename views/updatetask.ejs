@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+</head>
+<body>
+    <h2>Update Task</h2>
+<form method="post">
+    <table border="1">
+        <% result.forEach(function(data) { %>
+        <tr>
+            <td>Enter Task Name :</td>
+            <td><input type="text" name="taskname" value="<%= data.taskname%>"></td>
+        </tr>
+        <tr>
+            <td>Enter Ending Date :</td>
+            <td><input type="date" name="enddate" value="<%= data.enddate%>"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Edit"></td>
+        </tr>
+        <% }); %>
+    </table>
+</form>
+
+</body>
+</html>

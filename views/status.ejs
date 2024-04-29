@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+</head>
+<body>
+    <h2>Task Status</h2>
+    <table border="" style="text-align: center;">
+        <tr>
+            <th>ID</th>
+            <th>staff Name</th>
+            <!-- <th>Email</th> -->
+            <th>Task Name</th>
+            <th>Starting Date</th>
+            <th>Ending Date</th>
+            <th>Status</th>
+        </tr>
+        <% result.forEach(function(data){ %>
+            <tr>
+                <td>
+                    <%= data.id%>
+                </td>
+                <td>
+                    <%= data.staffname%>
+                </td>
+                <td>
+                    <%= data.taskname%>
+                </td>
+                <td>
+                    <%= data.startdate%>
+                </td>
+                <td>
+                    <%= data.enddate%>
+                </td>
+                <td>
+                    <%= data.work%>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+</body>
+</html>
